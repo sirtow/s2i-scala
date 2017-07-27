@@ -31,12 +31,12 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 
-RUN useradd -m builder
-RUN mkdir -p /opt/app-root
-RUN chown -R builder:builder /opt/app-root
+#RUN useradd -m builder
+#RUN mkdir -p /tmp/app-root
+#RUN chown -R builder:builder /opt/app-root
 
 # This default user is created in the openshift/base-centos7 image
-USER builder
+#USER builder
 
 # TODO: Set the default port for applications built using this image
 EXPOSE 9090

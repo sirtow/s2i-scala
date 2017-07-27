@@ -21,12 +21,13 @@ fi
 
 echo "---> Installing application source..."
 
-cp -Rf /tmp/src/. /opt/app-root/
+mkdir -p /tmp/app-root
+cp -Rf /tmp/src/. /tmp/app-root/
 
 echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install, pip install, etc.
 
-cd /opt/app-root
+cd /tmp/app-root
 ls -l
 /opt/sbt/bin/sbt assembly
 cp target/scala-2.10/rest-assembly-1.0.jar /tmp/rest-assembly-1.0.jar
