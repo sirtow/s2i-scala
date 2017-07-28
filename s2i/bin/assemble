@@ -29,5 +29,5 @@ echo "---> Building application from source..."
 
 cd /tmp/app-root
 ls -l
-/opt/sbt/bin/sbt assembly
+sbt assembly
 cp target/scala-2.10/rest-assembly-1.0.jar /tmp/rest-assembly-1.0.jar
