@@ -42,4 +42,5 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 EXPOSE 9090
 
 # TODO: Set the default CMD for the image
+USER 999
 CMD ["/usr/libexec/s2i/usage"]
