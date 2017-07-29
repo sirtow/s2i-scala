@@ -42,5 +42,9 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 EXPOSE 9090
 
 # TODO: Set the default CMD for the image
+RUN mkdir /home/sbt
+RUN chown sbt:root /home/sbt
 USER 999
+
+
 CMD ["/usr/libexec/s2i/usage"]
